@@ -6,11 +6,7 @@
         <field name="inherit_id" ref="sale.view_sale_advance_payment_inv" />
         <field name="arch" type="xml">
             <field name="advance_payment_method" position="before">
-                <field name="journal_id" />
-                <field
-                    name="payment_term_id"
-                    attrs="{'invisible': [('advance_payment_method', 'in', ['percentage'])]}"
-                />
+                <field name="journal_id" string="Diario" options='{"no_open": True, "no_create": True}'/>
                 <field name="order_id" invisible="1" />
             </field>
         </field>
